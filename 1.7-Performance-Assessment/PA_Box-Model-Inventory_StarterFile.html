@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/02/2026
+        Purpose: A figurine inventory page built with semantic HTML and an
+                 internal stylesheet. Box model properties are used to space
+                 and separate the sections so the inventory is easy to read.
+    -->
+    <meta charset="UTF-8">
+    <title>Box Model Inventory</title>
+
+    <style>
+        /* Sets the overall page width and centers it in the browser */
+        body {
+            width: 800px;           
+            margin: 20px auto;       
+            padding: 10px;            
+            font-family: "Times New Roman", Times, serif;
+            background-color: gray;
+        }
+
+        /* Separates the page title from the content below it */
+        header {
+            padding: 15px;            
+            border-bottom: 4px solid navy; 
+            margin-bottom: 20px;     
+        }
+
+        /* Spaces out the navigation links */
+        nav {
+            padding: 10px;            
+            margin-bottom: 20px;      
+            background-color: aliceblue;
+        }
+
+        /* Boxes each content section so the groups are visually separate */
+        section {
+            border: 2px solid silver;   
+            padding: 15px;              
+            margin-bottom: 20px;        
+            background-color: whitesmoke;
+        }
+
+        /* Makes the inventory table fill its section */
+        table {
+            width: 100%;            
+            border-collapse: collapse;
+            margin-top: 10px;         
+        }
+
+        /* Adds spacing inside every table cell so the data is readable */
+        th, td {
+            border: 1px solid gray;   
+            padding: 8px;             
+            text-align: left;
+        }
+
+        /* Shades the header row of the table */
+        th {
+            background-color: lavender;
+        }
+
+        /* Indents the side note and sets it apart from the main content */
+        aside {
+            width: 400px;             
+            border-left: 5px solid navy;  
+            padding: 10px;           
+            margin: 20px 0;           
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Figurine Inventory</h1>
+    <p>A running list of the figurines in my collection.</p>
+</header>
+
+<nav>
+    <a href="#inventory">Inventory</a> |
+    <a href="#highlight">Highlight</a> |
+    <a href="#care">Care Notes</a>
+</nav>
+
+<main>
+
+    <section id="inventory">
+        <h2>Current Inventory</h2>
+        <table>
+            <tr>
+                <th>Figurine</th>
+                <th>Series</th>
+                <th>Condition</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Iron Sentinel</td>
+                <td>Guardians</td>
+                <td>Mint</td>
+                <td>$45.00</td>
+            </tr>
+            <tr>
+                <td>Frost Warden</td>
+                <td>Guardians</td>
+                <td>Near Mint</td>
+                <td>$38.00</td>
+            </tr>
+            <tr>
+                <td>Ember Knight</td>
+                <td>Forge Legends</td>
+                <td>Good</td>
+                <td>$22.50</td>
+            </tr>
+            <tr>
+                <td>Storm Herald</td>
+                <td>Forge Legends</td>
+                <td>Mint</td>
+                <td>$60.00</td>
+            </tr>
+            <tr>
+                <td>Hollow Scout</td>
+                <td>Wastelands</td>
+                <td>Fair</td>
+                <td>$15.00</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="highlight">
+        <h2>Collection Highlight</h2>
+        <article>
+            <h3>Storm Herald</h3>
+            <p>
+                The most valuable piece in the collection. It was released as a
+                limited run of 500 and is the only figurine here that still has
+                its original packaging, which is why it grades as Mint.
+            </p>
+        </article>
+    </section>
+
+    <aside id="care">
+        <h2>Care Notes</h2>
+        <p>
+            Keep figurines out of direct sunlight to prevent the paint from
+            fading, and store them upright so the joints do not warp.
+        </p>
+    </aside>
+
+</main>
+
+<footer style="margin-top: 25px; padding: 15px; border-top: 3px solid navy; background-color: aliceblue;">
+    <p style="margin: 0; padding: 5px;">&copy; 2026 darhym6254</p>
+</footer>
+
+</body>
+</html>

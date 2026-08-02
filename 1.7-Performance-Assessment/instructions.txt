@@ -1,0 +1,9 @@
+Download the PA_Box-Model-Inventory_StarterFile.html file and the Lab Report Template from the course resources.
+Open the project folder using GitHub Desktop, then open the HTML file in Visual Studio Code.
+Modify the HTML file to include the following required elements:
+At least four additional semantic HTML elements.
+A table with at least three rows and three columns of data about figurines.
+An internal stylesheet that adjusts the box model properties of at least three elements.
+At least two inline styles applied to the footer.
+Save your changes and preview the completed web page in a browser.
+Use GitHub Desktop to commit your completed work.
