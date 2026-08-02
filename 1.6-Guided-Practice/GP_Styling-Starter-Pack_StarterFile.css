@@ -1,0 +1,24 @@
+/*
+    Author: Daryl Hymel - darhym6254
+    Date: 08/02/2026
+    Purpose: External stylesheet for the Styling Starter Pack page. It holds the
+             .external-pack rule, which gives the third card pack its gradient
+             background, decorative border, and drop shadow. 
+*/
+
+/* STEP 9 */
+/* Targets the "External" card pack for special styling */
+.external-pack {
+
+    /* Adds a diagonal gradient background from gold to orange */
+    background: linear-gradient(135deg, gold, orange);
+
+    /* Creates a bold, decorative border around the card */
+    border: 3px solid darkgoldenrod;
+
+    /* Sets the text color to black for readability */
+    color: black;
+
+    /* Adds a soft shadow to give a raised, card-like effect */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}

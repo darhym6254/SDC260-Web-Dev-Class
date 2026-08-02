@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/02/2026
+        Purpose: Demonstrates the three methods of applying CSS to a web page.
+                 
+    -->
+    <meta charset="UTF-8">
+    <title>Styling Starter Pack</title>
+    <!-- STEP 8:-->
+    <link rel="stylesheet" href="GP_Styling-Starter-Pack_StarterFile.css">
+    <!-- STEP 2: -->
+<style>
+    /* Styles the overall card pack container */
+    .pack {
+        border: 2px solid black;   /* Adds a solid border */
+        border-radius: 10px;  /* Rounds the corners */
+        padding: 16px;   /* Adds space inside the pack */
+        margin: 10px;   /* Adds space between packs */
+        width: 250px;   /* Sets a fixed width for each pack */
+        display: inline-block; /* Allows packs to display side-by-side */
+        vertical-align: top;   /* Aligns packs evenly at the top */
+        background-color: #ABE;   /* Sets the background */
+    }
+
+    /* Styles the title of each card pack */
+    .pack-title {
+        font-weight: bold;   /* Makes the text bold */
+        font-size: 18px;   /* Increase font size */
+    }
+
+    /* Styles the image placeholder area */
+    .pack-image {
+        width: 100%;   /* Makes the placeholder fill the pack width */
+        height: 120px;   /* Sets a fixed height */
+        background-color: #ddd;   /* Light gray background */
+        margin-bottom: 10px;   /* Adds space below the placeholder */
+        border-radius: 6px;   /* Rounds the corners */
+    }
+
+    /* Styles the footer text of each pack */
+    .pack-footer {
+        font-size: 12px;   /* Makes the text smaller */
+        color: gray;   /* Sets text color to gray */
+        margin-top: 10px;   /* Adds space above the footer */
+    }
+</style>
+</head>
+<body>
+
+    <!-- STEP 1: -->
+<header>
+    <h1>Styling Starter Pack</h1>
+    <p>Collect and compare CSS style packs!</p>
+</header>
+    <!-- STEP 3: Card Pack Container -->
+<main>
+    <section>
+        <h2>Available Card Packs</h2>
+        <!-- PACK 1: Inline Styles -->
+        <!-- STEP 4 -->
+<article class="pack" style="background-color: #ffe4e1; border: 3px dashed red;">
+    <div class="pack-image"></div>
+    <h3 class="pack-title">Inline Style Pack</h3>
+    <p>Styled using inline CSS directly in the element.</p>
+    <footer class="pack-footer">Rarity: Common</footer>
+</article>
+        <!-- PACK 2: Internal Styles -->
+        <!-- STEP 5 -->
+<article class="pack">
+    <div class="pack-image"></div>
+    <h3 class="pack-title">Internal Style Pack</h3>
+    <p>Styled using CSS inside the style tag in the head.</p>
+    <footer class="pack-footer">Rarity: Uncommon</footer>
+</article>
+        <!-- PACK 3: External Styles -->
+        <!-- STEP 6 -->
+<article class="pack external-pack">
+    <div class="pack-image"></div>
+    <h3 class="pack-title">External Style Pack</h3>
+    <p>Styled using an external CSS file for full separation of design and structure.</p>
+    <footer class="pack-footer">Rarity: Legendary</footer>
+</article>
+    <!-- STEP 7: Footer -->
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Styling Starter Pack Collection</p>
+    <p>Created by darhym6254</p>
+</footer>
+</body>
+</html>
