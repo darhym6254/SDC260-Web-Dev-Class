@@ -1,0 +1,77 @@
+/*
+    Author: Daryl Hymel - darhym6254
+    Date: 08/02/2026
+    Purpose: External stylesheet for the Collectable Books & Comics page. It sets
+             the display properties that build the layout and supplies the theme
+             colors for the body, hero, book cards, stats, form, button, and
+             footer.
+*/
+
+/* Structural Properties */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    display: inline-block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    display: block;
+}
+
+/* Thematic Properties */
+
+/* Warm paper background for the whole page */
+body {
+    background-color: linen;
+    color: darkslategray;
+}
+
+/* Dark banner across the top so the page title stands out */
+.hero {
+    background-color: darkmagenta;
+    color: white;
+}
+
+/* Each book sits on a clean white card with a comic-red accent edge */
+.book-card {
+    background-color: white;
+    color: black;
+    border-left-color: crimson;   /* Colors the left border set in the internal CSS */
+}
+
+/* Teal panel that separates the collection numbers from the cards */
+.stats {
+    background-color: teal;
+    color: white;
+}
+
+/* Light panel that groups the sign-up fields together */
+form {
+    background-color: whitesmoke;
+    color: darkslategray;
+    gap: 10px;                    /* Space between the labels and fields */
+}
+
+/* Red submit button that matches the accent on the book cards */
+button {
+    background-color: crimson;
+    color: white;
+}
+
+/* Dark closing bar that balances the hero at the top */
+footer {
+    background-color: darkmagenta;
+    color: white;
+}
