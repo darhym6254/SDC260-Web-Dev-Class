@@ -1,0 +1,119 @@
+/*
+    Author: Daryl Hymel - darhym6254
+    Date: 08/05/2026
+    Purpose: Stylesheet for the Adventurer Job Board. CSS Grid lays the quest
+             cards out in three even columns, and a media query collapses them
+             to one column at 768px so the board stays readable on a phone.
+*/
+
+/* ========================================
+   BASE PAGE STYLES
+   ----------------------------------------
+   Sets the overall look and feel of the page
+======================================== */
+
+body {
+    font-family: "Georgia", serif; /* Sets a classic, rustic serif font */
+    margin: 0; /* Removes default browser margin */
+    padding: 20px; /* Adds spacing around the page content */
+    background: #3b2f2f; /* Dark rustic background */
+    color: #2b1d0e; /* Dark text color for content */
+}
+
+/* ========================================
+   HEADER AND FOOTER STYLES
+   ----------------------------------------
+   Centers text and separates header/footer from main content
+======================================== */
+
+header, footer {
+    text-align: center; /* Centers text horizontally */
+    margin-bottom: 20px; /* Adds spacing below header/footer */
+    color: #f5e6c8; /* Light parchment-style text color */
+}
+
+/* ========================================
+   JOB CARD STYLES
+   ----------------------------------------
+   Defines the appearance of each card:
+   background, border, padding, and shape
+======================================== */
+
+ /* STEP 3 */
+
+.job-container {
+    display: grid; /* Turns the container into a grid of rows and columns */
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 25px; /* Even spacing between cards in both directions */
+}
+
+.job-card {
+    background: #f5e6c8; /* Light parchment-like background */
+    border: 2px solid #5a3e1b; /* Dark brown border for contrast */
+    padding: 15px; /* Internal spacing for content */
+    border-radius: 6px; /* Slightly rounded corners */
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.6); /* Depth shadow effect */
+
+    clip-path: polygon(
+        0% 5%, 5% 0%, 95% 0%, 100% 5%,  /* Top torn-paper effect */
+        100% 95%, 95% 100%, 5% 100%, 0% 95% /* Bottom torn-paper effect */
+    );
+    position: relative; /* Allows ::before and ::after to position inside card */
+}
+
+/* STEP 4 */
+
+/* ========================================
+   RESPONSIVE BREAKPOINT
+   ----------------------------------------
+   Below 768px there is not enough width for three readable columns, so the
+   grid collapses to a single full width column.
+======================================== */
+
+@media (max-width: 768px) {
+    .job-container {
+        grid-template-columns: 1fr; /* One column that fills the container */
+    }
+}
+
+/* ========================================
+   DECORATIVE NAIL
+   ----------------------------------------
+   Simulates a tack holding the card in place
+======================================== */
+
+.job-card::before {
+    content: ""; /* Creates empty decorative element */
+    position: absolute; /* Positions relative to .job-card */
+
+    top: -8px; /* Moves nail slightly above card */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Perfect horizontal centering */
+
+    width: 14px; /* Nail width */
+    height: 14px; /* Nail height */
+    background: radial-gradient(circle at 30% 30%, #ddd, #777); /* Metallic effect */
+    border-radius: 50%; /* Makes it circular */
+
+    border: 1px solid #444; /* Defines nail edge */
+
+    box-shadow: 
+        0 2px 2px rgba(0,0,0,0.5), /* Shadow below nail */
+        inset 0 1px 2px rgba(255,255,255,0.5); /* Inner highlight */
+}
+
+.job-card::after {
+    content: ""; /* Creates decorative element */
+    position: absolute; /* Positioned relative to card */
+
+    top: 4px; /* Starts slightly inside card */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Ensures perfect centering */
+
+    width: 2px; /* Thin vertical nail shaft */
+    height: 8px; /* Short length of nail body */
+
+    background-color: #444; /* Dark metal color */
+
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Subtle depth shadow */
+}
