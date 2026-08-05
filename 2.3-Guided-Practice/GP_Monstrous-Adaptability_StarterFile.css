@@ -1,0 +1,120 @@
+/*
+    Author: Daryl Hymel - darhym6254
+    Date: 08/05/2026
+    Purpose: Stylesheet for the Mythical Creature Bestiary. It uses Flexbox to
+             lay the creature cards out in a row that wraps and centers as the
+             screen narrows, and color codes each card border by creature type.
+*/
+
+/* ========================================
+   GLOBAL STYLES
+   ----------------------------------------
+   Uses high-contrast colors for readability, avoids overly complex gradients, and ensures font sizes are easy to read.
+======================================== */
+
+body {
+    font-family: Arial, sans-serif; /* Readable font with fallback */
+    margin: 0; /* Removes default browser spacing around the page */
+    padding: 20px; /* Adds space inside the body */
+    background-color: #1b1f2a; /* Dark background for high contrast and visual theme */
+    color: #f5f7fa; /* Light text color for readability against dark background */
+    line-height: 1.6; /* Increase spacing between lines for easier reading */
+}
+
+/* ========================================
+   HEADER / FOOTER
+======================================== */
+
+header, footer {
+    text-align: center; /* Text centering */
+    margin-bottom: 20px; /* Add space below */
+}
+
+/* ========================================
+   LAYOUT CONTAINER
+======================================== */
+
+.creature-container {
+
+    /* STEP 3 */
+    display: flex; /* Turns the container into a flexible box so cards sit in a row */
+    gap: 20px; /* Adds even spacing between cards without using margins */
+    flex-wrap: wrap; /* Lets cards drop to the next line instead of shrinking off screen */
+    justify-content: center; /* Centers the cards, so a short last row still looks balanced */
+
+}
+
+/* ========================================
+   CARD BASE STYLE
+   ----------------------------------------
+   Strong contrast improves readability.
+   Spacing and rounded corners improve comfort.
+======================================== */
+
+.creature-card {
+    border-radius: 12px; /* Rounds corners for a softer, modern look */
+    padding: 16px; /* Internal spacing */
+    width: 250px; /* Set consistent card width */
+    background-color: #2a3142; /* Dark card background for contrast */
+    border: 1px solid #3f4a63; /* Subtle border to separate card from background */
+}
+
+/* ========================================
+   TEXT STYLING
+======================================== */
+
+.creature-title {
+    font-size: 1.2rem; /* Scalable font size */
+    font-weight: bold; /* Bold the font*/
+}
+
+/* ========================================
+   CREATURE IMAGE CONTAINER
+   ----------------------------------------
+   This class wraps around the image.
+   It controls the size and shape of the visible image area.
+======================================== */
+
+.creature-image {
+    width: 100%; /* Span the full width of the parent */
+    height: 120px; /* Fixed height so for uniformity */
+    margin-bottom: 10px; /* Add space below */
+    border-radius: 6px; /* Round the corners for a softer look */
+    overflow: hidden; /* Hides any part that extends outside the container */
+}
+
+/* ========================================
+   IMAGE INSIDE CONTAINER
+   ----------------------------------------
+   These rules control how the image behaves inside the container.
+======================================== */
+
+.creature-image img {
+    width: 100%; /* Fill the full width of the container */
+    height: 100%; /* Match the container height */
+    object-fit: contain; /* Scale to fill the container */
+    display: block; /* Remove gaps */
+}
+
+/* ========================================
+   TYPE COLOR CODING
+   ----------------------------------------
+   Defines color and thickness for creature type card borders.
+======================================== */
+
+.dragon { border: 3px solid #ef4444; /* Red */ }
+.mystic { border: 3px solid #a855f7; /* Purple */ }
+.beast { border: 3px solid #22c55e; /* Green */ }
+.aquatic { border: 3px solid #3b82f6; /* Blue */ }
+
+/* STEP 4 */
+
+/* ========================================
+   NEW CREATURE TYPE: CELESTIAL
+   ----------------------------------------
+   Added for sun and star born creatures. Amber was chosen because none of the
+   four original types use a warm gold, so a celestial card is easy to pick out
+   at a glance without clashing with the red dragon border.
+======================================== */
+
+.celestial { border: 3px solid #f59e0b; /* Amber */ }

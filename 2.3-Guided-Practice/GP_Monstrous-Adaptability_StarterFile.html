@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/05/2026
+        Purpose: A mythical creature bestiary that displays creature cards in a
+                 flexible layout. Flexbox lets the cards wrap and center so the
+                 page adapts to different screen sizes.
+    -->
+    <meta charset="UTF-8">
+    <title>Mythical Creature Bestiary</title>
+
+    <!-- STEP 1 -->
+    <link rel="stylesheet" href="GP_Monstrous-Adaptability_StarterFile.css">
+
+</head>
+<body>
+    <header>
+        <h1>Mythical Creature Bestiary</h1>
+        <p>Explore legendary creatures from across the realms</p>
+    </header>
+    
+    <main>
+        <section class="creature-container">
+            
+            <!-- STEP 2 -->
+
+            <!-- Creature -->
+            <article class="creature-card aquatic">
+                <div class="creature-image"><img src="images/Mermaid.png" alt="A silver-haired siren swimming through sunlit water with a green scaled tail"></div>
+                <h2 class="creature-title">Siren</h2>
+                <p>A haunting singer whose voice pulls sailors beneath the waves.</p>
+                <p><strong>Type:</strong> Aquatic</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Rocky Shoals</p>
+                <p><strong>Weakness:</strong> Sealed ears</p>
+            </article>
+
+            <!-- Creature -->
+            <article class="creature-card beast">
+                <div class="creature-image"><img src="images/Minotaur.png" alt="A scarred minotaur warrior in armor holding a glowing rune axe in a torchlit dungeon"></div>
+                <h2 class="creature-title">Bloodhorn</h2>
+                <p>A scarred minotaur champion who guards the deepest cells.</p>
+                <p><strong>Type:</strong> Beast</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Ruined Catacombs</p>
+                <p><strong>Weakness:</strong> Open ground</p>
+            </article>
+
+            <!-- Creature -->
+            <article class="creature-card celestial">
+                <div class="creature-image"><img src="images/Phoenix.png" alt="A phoenix with outstretched flaming wings rising above mountains at sunrise"></div>
+                <h2 class="creature-title">Solar Phoenix</h2>
+                <p>A sunborn firebird whose wings reignite at every dawn.</p>
+                <p><strong>Type:</strong> Celestial</p>
+                <p><strong>Diet:</strong> Sunlight</p>
+                <p><strong>Habitat:</strong> Mountain Peaks</p>
+                <p><strong>Weakness:</strong> Total eclipse</p>
+            </article>
+
+            <!--
+                CREATURE CARD:
+                - Each <article> represents ONE creature
+                - You may DUPLICATE this entire article then UPDATE the contents to add more creatures
+                - Keep structure consistent for all cards
+            -->  
+            <article class="creature-card dragon">
+                <div class="creature-image"><img src="images/FireDragon.png" alt="An orange scaled dragon in flight breathing a jet of fire through a smoke filled sky"></div>
+                <h2 class="creature-title">Fire Dragon</h2>
+                <p>A powerful dragon that breathes fire.</p>
+                <p><strong>Type:</strong> Dragon</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Mountains</p>
+                <p><strong>Weakness:</strong> Ice magic</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card mystic">
+                <div class="creature-image"><img src="images/Unicorn.png" alt="An antique engraving of a unicorn with a long spiral horn leaping across a hilly landscape"></div>
+                <h2 class="creature-title">Unicorn</h2>
+                <p>A graceful magical horse with a glowing horn.</p>
+                <p><strong>Type:</strong> Mystic</p>
+                <p><strong>Diet:</strong> Herbivore</p>
+                <p><strong>Habitat:</strong> Enchanted Forest</p>
+                <p><strong>Weakness:</strong> Dark magic</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card mystic">
+                <div class="creature-image"><img src="images/Phoenix.png" alt="A phoenix with flaming outstretched wings rising above burning embers at sunrise"></div>
+                <h2 class="creature-title">Phoenix</h2>
+                <p>A fiery bird reborn from ashes.</p>
+                <p><strong>Type:</strong> Mystic</p>
+                <p><strong>Diet:</strong> Unknown</p>
+                <p><strong>Habitat:</strong> Volcanoes</p>
+                <p><strong>Weakness:</strong> Water</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card aquatic">
+                <div class="creature-image"><img src="images/Kraken.jpg" alt="A vintage engraving of a kraken dragging sailing ships under the water with its tentacles"></div>
+                <h2 class="creature-title">Kraken</h2>
+                <p>A giant sea monster lurking in deep waters.</p>
+                <p><strong>Type:</strong> Aquatic</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Ocean</p>
+                <p><strong>Weakness:</strong> Lightning</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card beast">
+                <div class="creature-image"><img src="images/Griffon.jpg" alt="A medieval manuscript drawing of a griffin with an eagle head and wings on a lion body"></div>
+                <h2 class="creature-title">Griffin</h2>
+                <p>A majestic creature with lion and eagle traits.</p>
+                <p><strong>Type:</strong> Beast</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Cliffs</p>
+                <p><strong>Weakness:</strong> Poison</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card beast">
+                <div class="creature-image"><img src="images/Werewolf.png" alt="A black and white illustration of a snarling werewolf standing in moonlit woods"></div>
+                <h2 class="creature-title">Werewolf</h2>
+                <p>A cursed human transforming under the full moon.</p>
+                <p><strong>Type:</strong> Beast</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Forest</p>
+                <p><strong>Weakness:</strong> Silver</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card dragon">
+                <div class="creature-image"><img src="images/IceDragon.png" alt="A pale blue frost covered dragon on a snowy peak breathing snowflakes over a pine forest"></div>
+                <h2 class="creature-title">Ice Dragon</h2>
+                <p>A frost-covered dragon from icy lands.</p>
+                <p><strong>Type:</strong> Dragon</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Tundra</p>
+                <p><strong>Weakness:</strong> Fire</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card aquatic">
+                <div class="creature-image"><img src="images/Mermaid.png" alt="A mermaid with long white hair and a green scaled tail swimming through sunlit water"></div>
+                <h2 class="creature-title">Mermaid</h2>
+                <p>A half-human, half-fish ocean dweller.</p>
+                <p><strong>Type:</strong> Aquatic</p>
+                <p><strong>Diet:</strong> Omnivore</p>
+                <p><strong>Habitat:</strong> Coral Reefs</p>
+                <p><strong>Weakness:</strong> Sonar</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card mystic">
+                <div class="creature-image"><img src="images/Fairy.png" alt="A fairy with iridescent wings and a feathered dress sitting on a wet leaf in a moonlit forest"></div>
+                <h2 class="creature-title">Fairy</h2>
+                <p>A tiny magical being with wings.</p>
+                <p><strong>Type:</strong> Mystic</p>
+                <p><strong>Diet:</strong> Nectar</p>
+                <p><strong>Habitat:</strong> Forest</p>
+                <p><strong>Weakness:</strong> Iron</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card beast">
+                <div class="creature-image"><img src="images/Minotaur.png" alt="An armored minotaur gripping a glowing rune carved axe in a torchlit stone dungeon"></div>
+                <h2 class="creature-title">Minotaur</h2>
+                <p>A bull-headed warrior trapped in labyrinths.</p>
+                <p><strong>Type:</strong> Beast</p>
+                <p><strong>Diet:</strong> Omnivore</p>
+                <p><strong>Habitat:</strong> Labyrinth</p>
+                <p><strong>Weakness:</strong> Illusion Magic</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card dragon">
+                <div class="creature-image"><img src="images/StormDragon.png" alt="A dark dragon gliding above storm clouds lit from within by lightning"></div>
+                <h2 class="creature-title">Storm Dragon</h2>
+                <p>A dragon that commands thunder and lightning.</p>
+                <p><strong>Type:</strong> Dragon</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Skies</p>
+                <p><strong>Weakness:</strong> Earth magic</p>
+            </article>
+            
+            <!-- Creature -->   
+            <article class="creature-card aquatic">
+                <div class="creature-image"><img src="images/Leviathan.png" alt="A coiled blue sea serpent covered in barnacles with glowing markings along its body"></div>
+                <h2 class="creature-title">Leviathan</h2>
+                <p>A colossal sea serpent of legend.</p>
+                <p><strong>Type:</strong> Aquatic</p>
+                <p><strong>Diet:</strong> Carnivore</p>
+                <p><strong>Habitat:</strong> Deep Ocean</p>
+                <p><strong>Weakness:</strong> Light magic</p>
+            </article>
+        
+        </section>
+    </main>
+    
+    <footer>
+        <p>Expeditionary Ecologist: darhym6254</p>
+        <p>Observation Log: 2026</p>
+    </footer>
+
+</body>
+</html>
