@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/05/2026
+        Purpose: A potion recipe book that lists each brew as a card with its own
+                 ingredient table. The layout is built mobile first with CSS Grid,
+                 starting at one column and widening to two columns at 768px and
+                 three columns at 1024px.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potion Recipe Book</title>
+
+    <!-- Connects the external stylesheet -->
+    <link rel="stylesheet" href="PA_Responsive-Recipes_StarterFile.css">
+</head>
+
+<body>
+    <header>
+        <h1>Potion Recipe Book</h1>
+        <p>A collection of magical brews and their ingredients</p>
+    </header>
+    
+    <main>
+        <section class="potion-container" aria-label="Potion recipes">
+    
+            <!-- 
+                POTION CARD:
+                - Each <article> represents ONE potion
+                - You may DUPLICATE this entire article then UPDATE the contents to add more potions
+                - Keep structure consistent for all potions
+            -->
+            <article class="potion">
+                <header>
+                    <!-- POTION NAME -->
+                    <h2>Healing Potion</h2>
+                </header>
+    
+                <!-- POTION DESCRIPTION -->
+                <p>Restores a moderate amount of health.</p>
+    
+                <!-- INGREDIENT TABLE -->
+                <section>
+                    <h3>Ingredients</h3>
+                    <table>
+                        <caption>Healing Potion Ingredients</caption>
+                        
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingredient</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            <tr>
+                                <td>Red Herb</td>
+                                <td>2 dried specimens</td>
+                            </tr>
+                            <tr>
+                                <td>Crystal Water</td>
+                                <td>1 vial</td>
+                            </tr>
+                            <tr>
+                                <td>Glow Mushroom</td>
+                                <td>3 caps without stems</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+    
+            <!-- POTION CARD -->
+            <article class="potion">
+    
+                <header>
+                    <h2>Invisibility Potion</h2>
+                </header>
+    
+                <p>Grants temporary invisibility.</p>
+    
+                <section>
+                    <h3>Ingredients</h3>
+    
+                    <table>
+                        <caption>Invisibility Potion Ingredients</caption>
+    
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingredient</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            <tr>
+                                <td>Ghost Leaf</td>
+                                <td>4 leaves</td>
+                            </tr>
+                            <tr>
+                                <td>Shadow Essence</td>
+                                <td>2 drops</td>
+                            </tr>
+                            <tr>
+                                <td>Nightshade</td>
+                                <td>1 plant with roots</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <!-- POTION CARD -->
+            <article class="potion">
+
+                <header>
+                    <h2>Elixir of Ironhide</h2>
+                </header>
+
+                <p>Hardens the skin against blades and blunt force for one hour.</p>
+
+                <section>
+                    <h3>Ingredients</h3>
+
+                    <table>
+                        <caption>Elixir of Ironhide Ingredients</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingredient</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Basilisk Scale</td>
+                                <td>2 fragments</td>
+                            </tr>
+                            <tr>
+                                <td>Iron Root</td>
+                                <td>1 handful, ground</td>
+                            </tr>
+                            <tr>
+                                <td>Ogre Fat</td>
+                                <td>3 spoonfuls</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <!-- POTION CARD -->
+            <article class="potion">
+
+                <header>
+                    <h2>Draught of Swift Winds</h2>
+                </header>
+
+                <p>Doubles running speed until the drinker next stops to rest.</p>
+
+                <section>
+                    <h3>Ingredients</h3>
+
+                    <table>
+                        <caption>Draught of Swift Winds Ingredients</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingredient</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Falcon Feather</td>
+                                <td>5 primary feathers</td>
+                            </tr>
+                            <tr>
+                                <td>Storm Salt</td>
+                                <td>1 pinch</td>
+                            </tr>
+                            <tr>
+                                <td>Mint Sprig</td>
+                                <td>2 sprigs, bruised</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <!-- POTION CARD -->
+            <article class="potion">
+
+                <header>
+                    <h2>Philter of Second Sight</h2>
+                </header>
+
+                <p>Reveals hidden doors, illusions, and creatures in total darkness.</p>
+
+                <section>
+                    <h3>Ingredients</h3>
+
+                    <table>
+                        <caption>Philter of Second Sight Ingredients</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingredient</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Owl Eye</td>
+                                <td>1 preserved in brine</td>
+                            </tr>
+                            <tr>
+                                <td>Moon Dew</td>
+                                <td>2 vials gathered at midnight</td>
+                            </tr>
+                            <tr>
+                                <td>Silver Thistle</td>
+                                <td>4 blossoms</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+        </section>
+    </main>
+    
+    <footer>
+        <p>Responsive Recipes Vol. 2026</p>
+        <p>Potion Archivist: darhym6254</p>
+    </footer>
+
+</body>
+</html>

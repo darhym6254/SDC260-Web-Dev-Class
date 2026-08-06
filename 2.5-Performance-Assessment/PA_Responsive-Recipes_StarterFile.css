@@ -1,0 +1,158 @@
+/*
+    Author: Daryl Hymel - darhym6254
+    Date: 08/05/2026
+    Purpose: Stylesheet for the Potion Recipe Book. The provided color system and
+             card styles are left unchanged. The layout section at the bottom
+             adds a mobile first CSS Grid that shows one potion column by
+             default, two columns from 768px, and three columns from 1024px.
+*/
+
+/* ========================================
+   ACCESSIBLE COLOR SYSTEM
+   ----------------------------------------
+   These variables define the color palette.
+   They provide strong contrast to support readability and accessibility.
+
+   (DO NOT MODIFY THESE VALUES)
+======================================== */
+
+:root {
+    --bg-main: #0f172a;       /* Main page background (dark blue) */
+    --bg-card: #1e293b;       /* Card background (lighter blue) */
+    --accent: #38bdf8;        /* Highlight color for headings (blue) */
+    --accent-soft: #7dd3fc;   /* Softer accent (lighter blue) */
+    --text-main: #f8fafc;     /* Primary text (near white) */
+    --text-muted: #cbd5f5;    /* Secondary text (light grayish blue) */
+    --table-header: #334155;  /* Table header background (grayish blue) */
+}
+
+/* ========================================
+   GLOBAL PAGE STYLES
+   ----------------------------------------
+   These styles apply to the entire page.
+   They ensure readability and consistent spacing.
+
+   (DO NOT MODIFY THESE RULES)
+======================================== */
+
+body {
+    margin: 0; /* Removes default browser spacing */
+    font-family: system-ui, Arial, sans-serif; /* Clean, readable font */
+    background-color: var(--bg-main); 
+    color: var(--text-main);
+    line-height: 1.6; /* Improves readability */
+}
+
+header, footer {
+    text-align: center; /* Centers text horizontally */
+    padding: 1.5rem; /* Adds space inside the element */
+    background-color: var(--bg-card); 
+}
+
+h1 {
+    margin-bottom: 0.5rem; /* Adds space below main heading */
+}
+
+main {
+    padding: 1rem; /* Adds spacing around main content */
+}
+
+/* ========================================
+   POTION CARD STRUCTURE
+   ----------------------------------------
+   Each potion is displayed as an article "card".
+
+   (DO NOT MODIFY THESE RULES)
+======================================== */
+
+.potion {
+    background-color: var(--bg-card);
+    padding: 1rem; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.potion h2 {
+    color: var(--accent); /* Helps potion names stand out */
+}
+
+.potion p {
+    color: var(--text-muted); /* Slightly softer text for descriptions */
+}
+
+/* ========================================
+   TABLE STYLING
+   ----------------------------------------
+   These styles improve readability of tables.
+   Tables are used to display ingredients.
+
+   (DO NOT MODIFY THESE RULES)
+======================================== */
+
+table {
+    width: 100%; /* Table takes full width of container */
+    border-collapse: collapse; /* Removes gaps between cells */
+    margin-top: 0.5rem; /* Adds space above table */
+}
+
+caption {
+    text-align: left; /* Aligns caption with table content */
+    font-weight: bold; /* Helps caption stand out */
+    margin-bottom: 0.5rem; /* Adds space below caption */
+}
+
+th {
+    background-color: var(--table-header);
+    color: var(--text-main);
+    text-align: left; /* Aligns text for readability */
+    padding: 0.5rem; /* Adds spacing inside cells */
+}
+
+td {
+    padding: 0.5rem; /* Inner spacing for cells */
+    border-top: 1px solid #475569; /* Subtle row divider */
+}
+
+/* ========================================
+   LAYOUT STRUCTURE & MEDIA QUERIES
+   ----------------------------------------
+   CSS Grid arranges the potion cards. Grid was chosen over Flexbox because
+   every card is the same kind of block and needs to line up in both directions.
+   Grid sets the number of columns directly, and its rows share a height, so the
+   ingredient tables stay aligned across a row instead of drifting.
+
+   These styles are written mobile first. The rules below the media queries are
+   the phone layout, and each min-width query adds columns as the screen grows.
+======================================== */
+
+/* MOBILE (default, under 768px)
+   One full width column so each ingredient table has room to breathe. */
+.potion-container {
+    display: grid; /* Turns the container into a grid */
+    grid-template-columns: 1fr; /* A single column filling the width */
+    gap: 1rem; /* Space between stacked cards */
+}
+
+/* TABLET (768px and up)
+   Two columns fit comfortably once there is this much width. */
+@media (min-width: 768px) {
+    .potion-container {
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 1.5rem; /* Slightly more separation than on mobile */
+    }
+}
+
+/* DESKTOP (1024px and up)
+   Three columns, and the content is capped and centered so lines of text do
+   not stretch uncomfortably wide on a large monitor. */
+@media (min-width: 1024px) {
+    .potion-container {
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 2rem; /* Widest spacing of the three sizes */
+    }
+
+    main {
+        max-width: 1200px; /* Stops the grid growing without limit */
+        margin: 0 auto; /* Centers the capped content on the page */
+        padding: 2rem; /* A little more breathing room at this size */
+    }
+}
