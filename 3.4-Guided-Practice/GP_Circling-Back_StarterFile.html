@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/16/2026
+        Purpose: Rustic Harvest Farmer's Market page. Provides the empty container
+                 sections for vendors, produce, events, tips, reviews, and market
+                 statistics. JavaScript loops fill each container with cards when
+                 the page loads.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustic Harvest Farmer's Market</title>
+    <link rel="stylesheet" href="GP_Circling-Back_StarterFile.css">
+    <!-- STEP 1 -->
+    <script src="GP_Circling-Back_StarterFile.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <section class="header-content">
+            <article>
+                <h1>Rustic Harvest Farmer's Market</h1>
+                <p class="tagline">Fresh produce, handmade goods, and local community events every Saturday.</p>
+            </article>
+            <nav aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="#vendors">Vendors</a></li>
+                    <li><a href="#produce">Produce</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <!-- STEP 2 -->
+        <section class="hero">
+            <article class="hero-card">
+                <h2>Shop Fresh. Support Local.</h2>
+                <p>Explore handcrafted products, seasonal produce, local farms, fresh baked goods, and community workshops in a warm outdoor market atmosphere.</p>
+            </article>
+        </section>
+
+        <!-- =====================================
+             VENDOR SECTION
+        ====================================== -->
+        <section id="vendors">
+            <h2>Featured Vendor Booths</h2>
+            <p class="section-description">Meet local growers, bakers, and artisans from across the region.</p>
+            <section class="card-grid" id="vendorContainer"></section>
+        </section>
+
+        <!-- =====================================
+             PRODUCE SECTION
+        ====================================== -->
+        <section id="produce">
+            <h2>Seasonal Produce</h2>
+            <p class="section-description">Freshly harvested fruits and vegetables available this weekend.</p>
+            <section class="card-grid" id="produceContainer"></section>
+        </section>
+
+        <!-- =====================================
+             EVENTS SECTION
+        ====================================== -->
+        <section id="events">
+            <h2>Weekly Community Events</h2>
+            <p class="section-description">Enjoy workshops, demonstrations, and family-friendly activities.</p>
+            <section class="card-grid" id="eventContainer"></section>
+        </section>
+
+        <!-- =====================================
+             TIPS SECTION
+        ====================================== -->
+        <section id="tips">
+            <h2>Sustainability Tips</h2>
+            <p class="section-description">Learn ways to shop responsibly and reduce waste.</p>
+            <section class="card-grid" id="tipsContainer"></section>
+        </section>
+
+        <!-- =====================================
+             REVIEWS SECTION
+        ====================================== -->
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <p class="section-description">Hear from visitors who love the Rustic Harvest experience.</p>
+            <section class="card-grid" id="reviewContainer"></section>
+        </section>
+
+        <!-- =====================================
+             MARKET STATISTICS
+        ====================================== -->
+        <aside class="stats-panel">
+            <h2>Market Statistics</h2>
+            <section id="statsContainer"></section>
+        </aside>
+    </main>
+    <footer>
+        <p>Rustic Harvest Farmer's Market • Saturdays • 8:00 AM - 2:00 PM</p>
+    </footer>
+</body>
+</html>
