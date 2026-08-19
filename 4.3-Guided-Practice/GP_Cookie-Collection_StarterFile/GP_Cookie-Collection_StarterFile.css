@@ -1,0 +1,263 @@
+/* =========================================
+      RESET 
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+      BODY 
+========================================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9f5;
+    color: #3a2b25;
+    line-height: 1.6;
+}
+
+/* =========================================
+      HEADER 
+========================================= */
+header {
+    background: linear-gradient(to right, #c47b5c, #d9a27e);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+      NAVIGATION 
+========================================= */
+nav {
+    background-color: #6f4e37;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+/* =========================================
+      HERO 
+========================================= */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+      PRODUCT GRID 
+========================================= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* =========================================
+      CARD 
+========================================= */
+.card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 1rem 1rem 0.5rem;
+}
+
+.card p {
+    padding: 0 1rem;
+}
+
+.card span {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+/* =========================================
+      BUTTONS 
+========================================= */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 1rem;
+    background-color: #c47b5c;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: #a45f45;
+}
+
+/* =========================================
+      FLOATING CART 
+========================================= */
+.cart-window {
+    /* Keeps the cart fixed in the same spot on the screen */
+    position: fixed;
+
+    /* Places the cart 20px from the right edge */
+    right: 20px;
+
+    /* Places the cart 20px from the bottom edge */
+    bottom: 20px;
+
+    /* Sets the cart width to 320px */
+    width: 320px;
+
+    /* Gives the cart a white background */
+    background-color: white;
+
+    /* Rounds the corners with a 16px radius */
+    border-radius: 16px;
+
+    /* Adds a soft shadow around the cart */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+
+    /* Hides any content that spills outside the rounded edges */
+    overflow: hidden;
+
+    /* Ensures the cart appears above most other elements */
+    z-index: 1000;
+}
+
+#toggle-cart {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+#cart-content {
+    padding: 1rem;
+}
+
+#cart-items {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+#cart-items li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remove-btn {
+    background-color: #8b0000;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.remove-btn:hover,
+.remove-btn:focus {
+    background-color: #5f0000;
+}
+
+/* =========================================
+      BOUNCE ANIMATION 
+========================================= */
+
+/* STEP 3 */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounce {
+    animation: bounce 0.5s ease;
+}
+
+
+/* =========================================
+      FOOTER 
+========================================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #6f4e37;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* =========================================
+      RESPONSIVE DESIGN 
+========================================= */
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-window {
+        width: 90%;
+        right: 5%;
+    }
+}
