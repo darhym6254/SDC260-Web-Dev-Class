@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 8/19/2026
+        Purpose: 4.4 Guided Practice - Planting Sessions. Plant shop page with a
+        shopping cart that saves its state in session storage.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evergreen Nursery</title>
+    <!-- STEP 1 -->
+    <link rel="stylesheet" href="GP_Planting-Sessions_StarterFile.css">
+    <script src="GP_Planting-Sessions_StarterFile.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Evergreen Nursery</h1>
+            <p>Beautiful plants for every space.</p>
+        </div>
+
+        <button id="cart-toggle" aria-label="Toggle shopping cart">
+            🛒 Cart
+        </button>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Bring Nature Home</h2>
+
+                <p>
+                    Discover vibrant indoor plants, calming greenery,
+                    and sun-loving favorites for your living space.
+                </p>
+            </div>
+        </section>
+
+        <section class="plant-grid" id="plant-grid">
+            <!-- Plants Render Here -->
+        </section>
+    </main>
+
+    <!-- CART PANEL -->
+    <aside id="cart-panel" class="cart-panel">
+
+        <!-- COLLAPSE BUTTON -->
+        <button
+            id="collapse-cart"
+            class="collapse-cart"
+            aria-label="Collapse shopping cart">
+            ❯
+        </button>
+
+        <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <h3 id="cart-total">
+                Total: $0.00
+            </h3>
+
+            <button id="checkout-btn" class="checkout-btn">
+                Checkout
+            </button>
+        </div>
+    </aside>
+
+    <footer>
+        <p>Evergreen Nursery © 2026</p>
+        <p>UI/UX Designer: darhym6254</p>
+    </footer>
+</body>
+</html>
