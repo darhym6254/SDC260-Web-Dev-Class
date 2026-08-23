@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel
+        Date: 08/23/2026
+        Purpose: 4.5 Guided Practice - Storing Locally. Cart page that shows
+                 reserved items and the total, synced from local storage.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+   
+    <!-- STEP 2 -->
+    <link rel="stylesheet" href="GP_Storing-Locally_StarterFile.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Molten Dreams Glassworks</h1>
+            <a class="cart-area" href="index.html">Continue Shopping</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="timer-section">
+            <h2>Reserved Items</h2>
+            <p id="countdown">15:00</p>
+        </section>
+    
+        <section class="cart-panel">
+            <h2>Your Cart</h2>
+            <section id="cart-items"></section>
+            <h3 id="cart-total">Total: $0</h3>
+        </section>
+    </main>
+</body>
+</html>
