@@ -1,0 +1,51 @@
+Follow the instructions below to complete your assignment:
+
+Download the following files from the course resources:
+PA_Storage-Central_StarterFile.zipDownload PA_Storage-Central_StarterFile.zip
+LabReport_Assessment_StorageCentral.docxDownload LabReport_Assessment_StorageCentral.docx
+Save the HTML, CSS, JavaScript, and image files in the same project folder.
+Open the project folder in Visual Studio Code and review the provided HTML, CSS, and JavaScript files.
+Add links in the HTML file that connect to the external stylesheet and the external JavaScript file.
+Display at least six handmade craft products. Each product must include:
+Image with alternative text
+Product name
+Product description
+Product price
+Available stock quantity
+Add to Cart button
+Create a shopping cart that allows users to add products and view their selected items. The cart should:
+Display individual item names and prices
+Display the total number of products in the cart
+Display the current total cost of items in the cart
+Allow the user to adjust item quantities
+Have a button to clear the entire cart
+Have a button to checkout
+Use colors, typography, and design choices that support the page’s overall style
+Store the shopping cart contents using localStorage.
+Use sessionStorage to track the number of items added to the cart during the current browsing session.
+Use a cookie to track and display which products were last purchased by the user.
+Track the stock quantity for each product:
+When an item is added to the cart, reduce the available stock count.
+When an item is removed from the cart, increase the available stock count.
+When a product reaches zero available stock, disable the Add to Cart button.
+When a product reaches zero available stock, grey out the product card.
+When a product reaches zero available stock, display a cursor tooltip that states Out of Stock.
+When a product is added to the cart, provide a visual indication that the action was successful. Examples include:
+A brief bouncing animation
+A temporary color change
+A notification message
+A highlighted cart update
+Leave a comment in your code describing the visual indication you used.
+Complete the checkout process by displaying an alert that includes:
+The total number of items purchased
+The total cost of the purchase
+After checkout is complete, clear the cart.
+Use the browser Developer Tools Console to confirm that browser storage is working. Test and document:
+localStorage
+sessionStorage
+document.cookie
+Confirm that the Console tab displays data for local storage, session storage, and cookies.
+Refresh the page and confirm that the session data remains.
+Close the page and navigate back to it. Confirm that the cookie and local storage data remain.
+Use GitHub Desktop to commit your completed work.
+Complete and submit the Lab Report Template.

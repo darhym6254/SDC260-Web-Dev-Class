@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel
+        Date: 08/23/2026
+        Purpose: 4.6 Performance Assessment - Storage Central. Storefront page
+                 for Willow & Pine Crafts. Displays handmade products, manages
+                 a shopping cart with quantities and stock tracking, and uses
+                 localStorage, sessionStorage, and cookies to save data.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willow &amp; Pine Crafts</title>
+    <link rel="stylesheet" href="PA_Storage-Central_StarterFile.css">
+    <script src="PA_Storage-Central_StarterFile.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Willow &amp; Pine Crafts</h1>
+            <p class="session-tracker">Items added this session: <span id="session-count">0</span></p>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome message shows the last purchase saved in a cookie -->
+        <section class="welcome-section">
+            <h2>Handmade With Care</h2>
+            <p id="welcome-message"></p>
+        </section>
+
+        <!-- Product cards inserted with JavaScript -->
+        <section class="product-grid" id="product-grid"></section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <aside class="cart-panel" aria-label="Shopping cart">
+        <h2>Your Cart</h2>
+        <p>Items in cart: <span id="cart-count">0</span></p>
+        <section id="cart-items"></section>
+        <h3 id="cart-total">Total: $0.00</h3>
+        <button id="clear-cart">Clear Cart</button>
+        <button id="checkout">Checkout</button>
+    </aside>
+
+    <!-- Added-to-cart notification -->
+    <section id="notification" class="notification">
+        Item added to cart!
+    </section>
+
+    <footer>
+        <p>Willow &amp; Pine Crafts &copy; 2026</p>
+        <p>Crafted by darhym5264</p>
+    </footer>
+</body>
+</html>
